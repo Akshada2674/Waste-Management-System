@@ -9,7 +9,7 @@
 <div align="center">
   <p>
     <p align="center">
-      <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines=+👋🏻+Welcome+User+👋🏻;👨🏻‍💻+Lets+Build+Together+👩🏻‍💻;💡+A+Social+Project+💡">
+      <img align="center" src="https://readme-typing-svg.herokuapp.com?color=%23${textVal}&lines=+👋🏻+Welcome+User+👋🏻;👨🏻‍💻+Let's+Build+Together+👩🏻‍💻;💡+A+Social+Project+💡">
     </p>
     <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2.5"/>
   </p>
