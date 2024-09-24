@@ -15,11 +15,10 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
-    height: 92vh;
+    
 }
 
 /* Header Section */
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,17 +55,30 @@ body {
 }
 
 
-
 /* Hero Section */
 .hero {
-    height: 80vh;
-    background: url('images/bg.png') no-repeat center center/cover;
+    position: relative;
+    height: 92vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    height: 92vh;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send the video to the background */
+}
+
+.hero-content {
+    z-index: 1; /* Keep the content on top of the video */
 }
 
 .hero h1 {
@@ -84,9 +96,16 @@ body {
     cursor: pointer;
 }
 
-/* Services Section */
+.enquire-btn:hover {
+    background-color: White;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-.services h2, .we-treat h2, .profile h2 {
+/* Services Section */
+.services{
+    height: 92vh;
+}
+.services h2 {
     font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
@@ -106,12 +125,24 @@ body {
     border-radius: 8px;
     width: 23%;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover img {
+    transform: scale(1.1);
 }
 
 .service h3 {
@@ -120,10 +151,20 @@ body {
     font-weight: 600;
 }
 
+.service:hover h3{
+    transform: scale(1.2);
+    margin-bottom: 20px;
+}
 .service p {
     margin-top: 10px;
     font-size: 14px;
     color: #666;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service:hover p {
+    transform: scale(1.1);
 }
 
 .service button {
@@ -134,16 +175,25 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service button:hover {
+    background-color: #007700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* We Treat Section */
-.we-treat{
-    background-color: lemonchiffon;
-    height: 400px !important;
+.we-treat {
+    background-color: rgba(243, 239, 8, 0.144);
+    height: 450px !important;
 }
 
 .we-treat h2{
-    margin-top: 20px !important;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 25px;
 }
 
 /* Footer */
